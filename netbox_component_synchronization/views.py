@@ -65,7 +65,7 @@ class BaseComponentComparisonView(LoginRequiredMixin, PermissionRequiredMixin, V
     component_label = "components"
     Model = None
     # All comparison views additionally require plugin permission
-    plugin_permission = "netbox_component_synchronization.use_component_synchronization"
+    plugin_permission = "netbox_component_synchronization.can_use"
     TemplateModel = None
     ComparisonClass = None
 
