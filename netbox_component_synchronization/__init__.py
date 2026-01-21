@@ -6,8 +6,11 @@ class Config(PluginConfig):
     verbose_name = "NetBox Component Synchronization"
     description = "Easily synchronize device components with their device types through an accessible UI."
     version = "5.0.0"
-    author = "Keith Knowles and Bastian Leicht"
+    author = "Keith Knowles and Bastian Leicht and Dave Bevan"
     author_email = "mkknowles@outlook.com"
+    permissions = (
+        ("use_component_synchronization", "Can use the NetBox Component Synchronization plugin"),
+    )
     default_settings = {
         "include_interfaces_panel": False,
         # Compare description during diff
