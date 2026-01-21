@@ -5,7 +5,7 @@ class Config(PluginConfig):
     name = "netbox_component_synchronization"
     verbose_name = "Component Synchronization Plugin"
     description = "Easily synchronize device components with their device types through an accessible UI."
-    version = "5.0.1"
+    version = "5.0.2"
     author = "Keith Knowles and Bastian Leicht and Dave Bevan"
     author_email = "mkknowles@outlook.com"
     default_settings = {
