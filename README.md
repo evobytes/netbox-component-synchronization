@@ -1,4 +1,4 @@
-# netbox-interface-synchronization
+# netbox-component-synchronization
 ## Overview
 MAJOR UPDATE
 
