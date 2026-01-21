@@ -64,6 +64,8 @@ class BaseComponentComparisonView(LoginRequiredMixin, PermissionRequiredMixin, V
     permission_required = ()
     component_label = "components"
     Model = None
+    # All comparison views additionally require plugin permission
+    plugin_permission = "netbox_component_synchronization.use_component_synchronization"
     TemplateModel = None
     ComparisonClass = None
 
@@ -130,6 +132,7 @@ class InterfaceComparisonView(BaseComponentComparisonView):
         "dcim.add_interface",
         "dcim.change_interface",
         "dcim.delete_interface",
+        BaseComponentComparisonView.plugin_permission,
     )
     component_label = "Interfaces"
     Model = Interface
@@ -163,6 +166,7 @@ class PowerPortComparisonView(BaseComponentComparisonView):
         "dcim.add_powerport",
         "dcim.change_powerport",
         "dcim.delete_powerport",
+        BaseComponentComparisonView.plugin_permission,
     )
     component_label = "Power ports"
     Model = PowerPort
@@ -192,6 +196,7 @@ class ConsolePortComparisonView(BaseComponentComparisonView):
         "dcim.add_consoleport",
         "dcim.change_consoleport",
         "dcim.delete_consoleport",
+        BaseComponentComparisonView.plugin_permission,
     )
     component_label = "Console ports"
     Model = ConsolePort
@@ -219,6 +224,7 @@ class ConsoleServerPortComparisonView(BaseComponentComparisonView):
         "dcim.add_consoleserverport",
         "dcim.change_consoleserverport",
         "dcim.delete_consoleserverport",
+        BaseComponentComparisonView.plugin_permission,
     )
     component_label = "Console server ports"
     Model = ConsoleServerPort
@@ -246,6 +252,7 @@ class PowerOutletComparisonView(BaseComponentComparisonView):
         "dcim.add_poweroutlet",
         "dcim.change_poweroutlet",
         "dcim.delete_poweroutlet",
+        BaseComponentComparisonView.plugin_permission,
     )
     component_label = "Power outlets"
     Model = PowerOutlet
@@ -284,6 +291,7 @@ class FrontPortComparisonView(BaseComponentComparisonView):
         "dcim.add_frontport",
         "dcim.change_frontport",
         "dcim.delete_frontport",
+        BaseComponentComparisonView.plugin_permission,
     )
     component_label = "Front ports"
     Model = FrontPort
@@ -313,6 +321,7 @@ class RearPortComparisonView(BaseComponentComparisonView):
         "dcim.add_rearport",
         "dcim.change_rearport",
         "dcim.delete_rearport",
+        BaseComponentComparisonView.plugin_permission,
     )
     component_label = "Rear ports"
     Model = RearPort
@@ -342,6 +351,7 @@ class DeviceBayComparisonView(BaseComponentComparisonView):
         "dcim.add_devicebay",
         "dcim.change_devicebay",
         "dcim.delete_devicebay",
+        BaseComponentComparisonView.plugin_permission,
     )
     component_label = "Device bays"
     Model = DeviceBay
@@ -363,6 +373,7 @@ class ModuleBayComparisonView(BaseComponentComparisonView):
         "dcim.add_modulebay",
         "dcim.change_modulebay",
         "dcim.delete_modulebay",
+        BaseComponentComparisonView.plugin_permission,
     )
     component_label = "Module bays"
     Model = ModuleBay
