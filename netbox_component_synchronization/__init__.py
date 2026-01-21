@@ -8,9 +8,6 @@ class Config(PluginConfig):
     version = "5.0.0"
     author = "Keith Knowles and Bastian Leicht and Dave Bevan"
     author_email = "mkknowles@outlook.com"
-    permissions = (
-        ("use_component_synchronization", "Can use the NetBox Component Synchronization plugin"),
-    )
     default_settings = {
         "include_interfaces_panel": False,
         # Compare description during diff
