@@ -1,6 +1,4 @@
 from django.db import migrations, models
-import django.db.models.deletion
-
 
 class Migration(migrations.Migration):
 
@@ -24,8 +22,8 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("created", models.DateTimeField(auto_now_add=True)),
-                ("last_updated", models.DateTimeField(auto_now=True)),
+                ("created", models.DateTimeField(auto_now_add=True, null=True)),
+                ("last_updated", models.DateTimeField(auto_now=True, null=True)),
             ],
             options={
                 "verbose_name": "Synchronization Button",
