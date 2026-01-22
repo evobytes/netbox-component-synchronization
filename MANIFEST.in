@@ -1,0 +1,2 @@
+recursive-include netbox_component_synchronization/templates *.html
+recursive-include netbox_component_synchronization/migrations *.py
