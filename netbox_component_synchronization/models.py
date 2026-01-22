@@ -1,7 +1,6 @@
-from netbox.models import ChangeLoggedModel
+from netbox.models import NetBoxModel
 
-
-class ComponentSyncPermission(ChangeLoggedModel):
+class ComponentSyncPermission(NetBoxModel):
     class Meta:
         verbose_name = "Synchronize Button"
         verbose_name_plural = "Synchronize Button"
